@@ -2,36 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout & Shipping</title>
 </head>
 <body>
-  <section>
-    <h2>Checkout Process</h2>
+  <header>
+    <h1>Checkout</h1>
+    <nav>
+      <a href="shopping-cart.html">Back to Cart</a> |
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
 
-    <fieldset>
-      <legend>Shipping Address</legend>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required /><br/>
-      <label for="street">Street:</label>
-      <input type="text" id="street" name="street" required /><br/>
-      <label for="zip">ZIP Code:</label>
-      <input type="text" id="zip" name="zip" required />
-    </fieldset>
+  <main>
+    <section>
+      <h2>Checkout Process</h2>
+      <form action="#" method="POST">
 
-    <form>
-      <fieldset>
-        <legend>Payment Details</legend>
-        <label><input type="radio" name="payment" value="credit-card" required />Credit Card</label><br/>
-        <label><input type="radio" name="payment" value="paypal" />PayPal</label><br/>
-        <!-- Add more payment fields here -->
-      </fieldset>
-    </form>
+        <fieldset>
+          <legend>Shipping Address</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br/>
+          <label for="street">Street:</label>
+          <input type="text" id="street" name="street" required /><br/>
+          <label for="zip">ZIP Code:</label>
+          <input type="text" id="zip" name="zip" required />
+        </fieldset>
 
-    <aside style="position: fixed; right: 0; top: 0; width: 200px; background: #f0f0f0; padding: 10px;">
-      <h3>Order Summary</h3>
-      <p>Total: $79.97</p>
-      <button type="submit">Place Order</button>
-    </aside>
-  </section>
+        <fieldset>
+          <legend>Payment Details</legend>
+          <label><input type="radio" name="payment" value="credit-card" required /> Credit Card</label><br/>
+          <label><input type="radio" name="payment" value="paypal" /> PayPal</label><br/>
+        </fieldset>
+
+        <aside style="position: fixed; right: 0; top: 0; width: 200px; background: #f0f0f0; padding: 10px;">
+          <h3>Order Summary</h3>
+          <p>Total: $79.97</p>
+          <button type="submit">Place Order</button>
+        </aside>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Product Store</p>
+  </footer>
 </body>
 </html>
