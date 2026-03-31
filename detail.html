@@ -2,32 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Detail</title>
 </head>
 <body>
-  <table>
-    <tr><th>Specification</th><th>Details</th></tr>
-    <tr><td>Weight</td><td>1 kg</td></tr>
-    <tr><td>Color</td><td>Blue</td></tr>
-    <!-- More specifications -->
-  </table>
+  <header>
+    <h1>Product Detail</h1>
+    <nav>
+      <a href="product-listing.html">Back to Products</a> |
+      <a href="shopping-cart.html">Cart</a>
+    </nav>
+  </header>
 
-  <form>
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" value="1" min="1" />
-    <button type="submit">Add to Cart</button>
-  </form>
+  <main>
+    <section>
+      <h2>Specifications</h2>
+      <table border="1">
+        <caption>Product Specifications</caption>
+        <tr><th scope="col">Specification</th><th scope="col">Details</th></tr>
+        <tr><td>Weight</td><td>1 kg</td></tr>
+        <tr><td>Color</td><td>Blue</td></tr>
+      </table>
+    </section>
 
-  <section>
-    <h2>User Reviews</h2>
-    <blockquote>
-      <p>Great product, highly recommend!</p>
-      <footer>- Alice</footer>
-    </blockquote>
-    <article>
-      <p>Not as expected.</p>
-      <footer>- Bob</footer>
-    </article>
-  </section>
+    <section>
+      <h2>Purchase</h2>
+      <form action="shopping-cart.html" method="POST">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1" />
+        <button type="submit">Add to Cart</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>User Reviews</h2>
+      <blockquote>
+        <p>Great product, highly recommend!</p>
+        <footer>- Alice</footer>
+      </blockquote>
+      <article>
+        <p>Not as expected.</p>
+        <footer>- Bob</footer>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Product Store</p>
+  </footer>
 </body>
 </html>
