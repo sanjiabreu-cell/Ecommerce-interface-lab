@@ -2,32 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shopping Cart</title>
 </head>
 <body>
-  <ul>
-    <li>
-      <img src="product1.jpg" alt="Product 1" />
-      <h3>Product 1</h3>
-      <p>$19.99</p>
-      <input type="number" value="1" min="1" />
-    </li>
-    <li>
-      <img src="product2.jpg" alt="Product 2" />
-      <h3>Product 2</h3>
-      <p>$29.99</p>
-      <input type="number" value="2" min="1" />
-    </li>
-  </ul>
+  <header>
+    <h1>Shopping Cart</h1>
+    <nav>
+      <a href="product-listing.html">Continue Shopping</a> |
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-  <section>
-    <p>Subtotal: $79.97</p>
-  </section>
+  <main>
+    <section>
+      <h2>Items in Your Cart</h2>
+      <ul>
+        <li>
+          <img src="product1.jpg" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$19.99</p>
+          <label>Quantity:<input type="number" value="1" min="1" /></label>
+        </li>
+        <li>
+          <img src="product2.jpg" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$29.99</p>
+          <label>Quantity:<input type="number" value="2" min="1" /></label>
+        </li>
+      </ul>
+    </section>
 
-  <a href="checkout.html" role="button">Proceed to Checkout</a>
+    <section>
+      <h2>Order Summary</h2>
+      <p>Subtotal: $79.97</p>
+    </section>
 
-  <section>
-    <p>Your cart is currently empty</p>
-  </section>
+    <section>
+      <a href="checkout.html" role="button" aria-label="Proceed to Checkout">
+        Proceed to Checkout
+      </a>
+    </section>
+
+    <section>
+      <h2>Cart Status</h2>
+      <p>Your cart is currently empty</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Product Store</p>
+  </footer>
 </body>
 </html>
