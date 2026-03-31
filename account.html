@@ -2,30 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>User Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
 </head>
 <body>
   <header>
-    <h1>Welcome, User!</h1>
+    <h1>Create an Account</h1>
     <nav>
-      <ul>
-        <li><a href="#">Order History</a></li>
-        <li><a href="#">Profile Settings</a></li>
-        <li><a href="#">Wishlist</a></li>
-      </ul>
+      <a href="index.html">Home</a> |
+      <a href="user-account.html">Account</a>
     </nav>
   </header>
 
-  <dl>
-    <dt>Order 001</dt>
-    <dd>Details of order...</dd>
-    <dt>Order 002</dt>
-    <dd>Details of order...</dd>
-  </dl>
+  <main>
+    <section>
+      <h2>Sign Up</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Account Details</legend>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br/>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required /><br/>
+          <button type="submit">Sign Up</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
 
-  <details>
-    <summary>Order 003</summary>
-    <p>More information about order 003</p>
-  </details>
+  <footer>
+    <p>&copy; 2026 User Registration</p>
+  </footer>
 </body>
 </html>
