@@ -1,0 +1,315 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+    --bg-light: #f4f4f4;
+    --text-main: #333333;
+    --white: #ffffff;
+    --border-color: #dcdcdc;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
+
+header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--white);
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover */
+nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Active */
+nav a:active {
+    color: yellow;
+}
+
+/* Focus */
+nav a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+section {
+    background-color: var(--white);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+button:active {
+    background-color: black;
+}
+
+/* =========================
+   PRODUCT LIST STYLING
+========================= */
+
+article {
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    padding: 15px;
+    vertical-align: top;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Product Card Hover */
+article:hover {
+    transform: scale(1.03);
+}
+
+/* nth-child styling */
+article:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+article:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Images */
+img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* =========================
+   TABLE STYLING
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* First Child Styling */
+th:first-child,
+td:first-child {
+    background-color: #eeeeee;
+    font-weight: bold;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+form {
+    margin-top: 15px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+/* Required Pseudo-class */
+input:required {
+    border: 2px solid #e74c3c;
+}
+
+/* Valid Pseudo-class */
+input:valid {
+    border: 2px solid #2ecc71;
+}
+
+/* =========================
+   PRICE PSEUDO-ELEMENT
+========================= */
+
+.price::before {
+    content: "₱";
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* =========================
+   EMPTY CART STYLE
+========================= */
+
+section:empty {
+    background-color: #ffe6e6;
+    border: 2px dashed red;
+    padding: 20px;
+}
+
+/* =========================
+   LIST MARKERS
+========================= */
+
+li::marker {
+    color: var(--accent-color);
+}
+
+/* =========================
+   BLOCKQUOTE STYLING
+========================= */
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    font-style: italic;
+    position: relative;
+}
+
+/* Before & After */
+blockquote::before {
+    content: "“";
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+blockquote::after {
+    content: "”";
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+/* =========================
+   ASIDE
+========================= */
+
+aside {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 15px;
+    margin-top: 20px;
+}
