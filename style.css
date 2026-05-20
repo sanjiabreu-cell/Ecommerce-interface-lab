@@ -3,12 +3,12 @@
 ========================= */
 
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #e67e22;
-    --bg-light: #f4f4f4;
+    --primary-color: #005f99;      /* Ocean Blue */
+    --accent-color: #f4c542;       /* Sandy Yellow */
+    --bg-light: #eef7fb;
     --text-main: #333333;
     --white: #ffffff;
-    --border-color: #dcdcdc;
+    --border-color: #b8d8e8;
 }
 
 /* Smooth Scroll */
@@ -70,7 +70,7 @@ nav a:hover {
 
 /* Active */
 nav a:active {
-    color: yellow;
+    color: #ffe680;
 }
 
 /* Focus */
@@ -90,6 +90,7 @@ section {
     padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px rgba(0, 95, 153, 0.1);
 }
 
 h1, h2, h3 {
@@ -106,21 +107,23 @@ p {
 
 button {
     background-color: var(--accent-color);
-    color: var(--white);
+    color: #333;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     font-size: 15px;
+    font-weight: bold;
 }
 
 button:hover {
     background-color: var(--primary-color);
+    color: var(--white);
 }
 
 button:active {
-    background-color: black;
+    background-color: #003f66;
 }
 
 /* =========================
@@ -142,15 +145,16 @@ article {
 /* Product Card Hover */
 article:hover {
     transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 95, 153, 0.2);
 }
 
 /* nth-child styling */
 article:nth-child(odd) {
-    background-color: #fafafa;
+    background-color: #f8fcff;
 }
 
 article:nth-child(even) {
-    background-color: #f0f0f0;
+    background-color: #eef7fb;
 }
 
 /* Images */
@@ -196,7 +200,7 @@ th, td {
 /* First Child Styling */
 th:first-child,
 td:first-child {
-    background-color: #eeeeee;
+    background-color: #fff3c4;
     font-weight: bold;
 }
 
@@ -230,12 +234,12 @@ input {
 
 /* Required Pseudo-class */
 input:required {
-    border: 2px solid #e74c3c;
+    border: 2px solid #005f99;
 }
 
 /* Valid Pseudo-class */
 input:valid {
-    border: 2px solid #2ecc71;
+    border: 2px solid #f4c542;
 }
 
 /* =========================
@@ -253,8 +257,8 @@ input:valid {
 ========================= */
 
 section:empty {
-    background-color: #ffe6e6;
-    border: 2px dashed red;
+    background-color: #fff9e6;
+    border: 2px dashed var(--accent-color);
     padding: 20px;
 }
 
@@ -271,7 +275,7 @@ li::marker {
 ========================= */
 
 blockquote {
-    background-color: #f9f9f9;
+    background-color: #f8fcff;
     border-left: 5px solid var(--accent-color);
     padding: 15px;
     font-style: italic;
@@ -282,13 +286,13 @@ blockquote {
 blockquote::before {
     content: "“";
     font-size: 30px;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 blockquote::after {
     content: "”";
     font-size: 30px;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /* =========================
@@ -296,7 +300,7 @@ blockquote::after {
 ========================= */
 
 aside {
-    background-color: #f0f0f0;
+    background-color: #f3fbff;
     padding: 15px;
     border-radius: 8px;
     margin: 20px;
