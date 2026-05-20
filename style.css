@@ -11,12 +11,15 @@
     --border-color: #b8d8e8;
 }
 
-/* Smooth Scroll */
+/* Mobile First */
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Body */
 body {
     margin: 0;
     padding: 0;
@@ -33,7 +36,6 @@ body {
 header {
     background-color: var(--primary-color);
     padding: 15px;
-    text-align: center;
 }
 
 header h1 {
@@ -41,7 +43,11 @@ header h1 {
     margin: 0;
 }
 
+/* Mobile Navigation */
 nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
 }
 
@@ -51,8 +57,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+    display: block;
+    margin: 10px 0;
 }
 
 nav a {
@@ -62,18 +68,15 @@ nav a {
     transition: 0.3s;
 }
 
-/* Hover */
 nav a:hover {
     color: var(--accent-color);
     text-decoration: underline;
 }
 
-/* Active */
 nav a:active {
     color: #ffe680;
 }
 
-/* Focus */
 nav a:focus,
 button:focus,
 input:focus {
@@ -86,7 +89,7 @@ input:focus {
 
 section {
     background-color: var(--white);
-    margin: 20px;
+    margin: 15px;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid var(--border-color);
@@ -102,12 +105,25 @@ p {
 }
 
 /* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 250px;
+    flex-direction: column;
+}
+
+/* =========================
    BUTTONS
 ========================= */
 
 button {
     background-color: var(--accent-color);
-    color: #333;
+    color: #333333;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -127,22 +143,24 @@ button:active {
 }
 
 /* =========================
-   PRODUCT LIST STYLING
+   PRODUCT GRID
 ========================= */
 
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
 article {
-    display: inline-block;
-    width: 220px;
-    margin: 10px;
-    padding: 15px;
-    vertical-align: top;
     background-color: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 10px;
+    padding: 15px;
     transition: 0.3s;
+    animation: fadeIn 1s ease;
 }
 
-/* Product Card Hover */
 article:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 10px rgba(0, 95, 153, 0.2);
@@ -157,9 +175,11 @@ article:nth-child(even) {
     background-color: #eef7fb;
 }
 
-/* Images */
+/* Product Images */
 img {
-    width: 100%;
+    width: 40%;
+    max-width: 40%;
+    height: auto;
     border-radius: 5px;
 }
 
@@ -179,8 +199,12 @@ a:hover {
 }
 
 /* =========================
-   TABLE STYLING
+   TABLE RESPONSIVENESS
 ========================= */
+
+.table-container {
+    overflow-x: auto;
+}
 
 table {
     width: 100%;
@@ -197,7 +221,6 @@ th, td {
     text-align: left;
 }
 
-/* First Child Styling */
 th:first-child,
 td:first-child {
     background-color: #fff3c4;
@@ -230,36 +253,47 @@ input {
     margin-bottom: 10px;
     border: 1px solid #999;
     border-radius: 5px;
+    width: 100%;
 }
 
-/* Required Pseudo-class */
 input:required {
-    border: 2px solid #005f99;
+    border: 2px solid var(--primary-color);
 }
 
-/* Valid Pseudo-class */
 input:valid {
-    border: 2px solid #f4c542;
+    border: 2px solid var(--accent-color);
 }
 
 /* =========================
-   PRICE PSEUDO-ELEMENT
+   CART FLEXBOX
 ========================= */
 
-.price::before {
-    content: "₱";
-    color: var(--accent-color);
-    font-weight: bold;
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 /* =========================
-   EMPTY CART STYLE
+   CHECKOUT LAYOUT
 ========================= */
 
-section:empty {
-    background-color: #fff9e6;
-    border: 2px dashed var(--accent-color);
-    padding: 20px;
+.checkout-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   ASIDE SIDEBAR
+========================= */
+
+aside {
+    background-color: #f3fbff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
 }
 
 /* =========================
@@ -271,7 +305,7 @@ li::marker {
 }
 
 /* =========================
-   BLOCKQUOTE STYLING
+   BLOCKQUOTE
 ========================= */
 
 blockquote {
@@ -282,7 +316,6 @@ blockquote {
     position: relative;
 }
 
-/* Before & After */
 blockquote::before {
     content: "“";
     font-size: 30px;
@@ -296,14 +329,35 @@ blockquote::after {
 }
 
 /* =========================
-   ASIDE
+   ANIMATIONS
 ========================= */
 
-aside {
-    background-color: #f3fbff;
-    padding: 15px;
-    border-radius: 8px;
-    margin: 20px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+button:hover {
+    animation: bounce 0.4s ease;
 }
 
 /* =========================
@@ -316,4 +370,67 @@ footer {
     color: var(--white);
     padding: 15px;
     margin-top: 20px;
+}
+
+/* =========================
+   TABLET VIEW
+========================= */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .cart-item {
+        flex-direction: row;
+    }
+}
+
+/* =========================
+   DESKTOP VIEW
+========================= */
+
+@media (min-width: 769px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 15px;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .checkout-layout {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .main-layout {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        gap: 20px;
+    }
+
+    .cart-item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
