@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Listing</title>
 </head>
 <body>
   <header>
-    <h1>Product Listing</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="shopping-cart.html">Cart</a> |
-      <a href="user-account.html">Account</a>
-    </nav>
+    <div class="header-inner">
+      <a href="Landing.html" class="brand">🛍️ SANJI'S STORE</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="Landing.html">Home</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="Cart.html">Cart</a></li>
+          <li><a href="Account.html">Account</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+<main class="container products-page">
+    <aside>
+      <form action="#" method="GET">
+        <fieldset>
+          <legend>Filter Products</legend>
+          <p><strong>Category</strong></p>
+          <label><input type="checkbox" name="category" value="cat1" /> Category 1</label><br/>
+          <label><input type="checkbox" name="category" value="cat2" /> Category 2</label><br/>
+          <p><strong>Price</strong></p>
+          <label><input type="radio" name="price" value="low" /> Low Price</label><br/>
+          <label><input type="radio" name="price" value="high" /> High Price</label><br/>
+        </fieldset>
+        <button type="submit">Apply Filters</button>
+      </form>
+    </aside>
+    <section class="products-container">
       <article>
-        <img src="Sofa.jpg" alt="Product 1" />
-        <p>Price: $19.99</p>
-        <a href="product-detail.html">View Details</a>
+        <img src="sofa.jpg" alt="Sofa" />
+        <p>Price: <span class="price">3,999.00</span></p>
+        <a href="detail.html">View Details</a>
       </article>
 
       <article>
-        <img src="Bed.jpg" alt="Product 2" />
-        <p>Price: $29.99</p>
-        <a href="product-detail.html">View Details</a>
+        <img src="bed.jpg" alt="Bed" />
+        <p>Price: <span class="price">2,999.00</span></p>
+        <a href="detail.html">View Details</a>
       </article>
     </section>
   </main>
 
-  <aside>
-    <form action="#" method="GET">
-      <fieldset>
-        <legend>Filter Products</legend>
-        <p><strong>Category</strong></p>
-        <label><input type="checkbox" name="category" value="cat1" /> Category 1</label><br/>
-        <label><input type="checkbox" name="category" value="cat2" /> Category 2</label><br/>
-        <p><strong>Price</strong></p>
-        <label><input type="radio" name="price" value="low" /> Low Price</label><br/>
-        <label><input type="radio" name="price" value="high" /> High Price</label><br/>
-      </fieldset>
-      <button type="submit">Apply Filters</button>
-    </form>
-  </aside>
-
   <footer>
-    <p>&copy; 2026 Product Store</p>
+    <div class="container">
+      <p>&copy; <span id="year-footer">2026</span> SANJI'S STORE</p>
+    </div>
   </footer>
+  <script src="main.js" defer></script>
 </body>
 </html>
