@@ -3,31 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
   <title>Product Detail</title>
 </head>
 <body>
   <header>
-    <h1>Product Detail</h1>
-    <nav>
-      <a href="product-listing.html">Back to Products</a> |
-      <a href="shopping-cart.html">Cart</a>
-    </nav>
+    <div class="header-inner">
+      <a href="Landing.html" class="brand">🛍️ SANJI'S STORE</a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="Landing.html">Home</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="Cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <section>
       <h2>Specifications</h2>
-      <table border="1">
-        <caption>Product Specifications</caption>
-        <tr><th scope="col">Specification</th><th scope="col">Details</th></tr>
-        <tr><td>Weight</td><td>1 kg</td></tr>
-        <tr><td>Color</td><td>Blue</td></tr>
-      </table>
+      <div class="table-container">
+        <table>
+          <caption>Product Specifications</caption>
+          <tr><th scope="col">Specification</th><th scope="col">Details</th></tr>
+          <tr><td>Weight</td><td>24kg</td></tr>
+          <tr><td>Color</td><td>GREY</td></tr>
+        </table>
+      </div>
     </section>
 
     <section>
       <h2>Purchase</h2>
-      <form action="shopping-cart.html" method="POST">
+      <form action="Cart.html" method="POST">
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" value="1" min="1" />
         <button type="submit">Add to Cart</button>
@@ -48,7 +56,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Product Store</p>
+    <div class="container">
+      <p>&copy; <span id="year-detail">2026</span> SANJI'S STORE</p>
+    </div>
   </footer>
+  <script src="main.js" defer></script>
 </body>
 </html>
